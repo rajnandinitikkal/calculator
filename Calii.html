@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>calculator</title>
+    <style>
+        .calculator-container {
+            height: 480px;
+            width: 350px;
+            background-color: rgb(45, 40, 50);
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            border-radius: 20px;
+        }
+        
+        .logo {
+            font-size: 15px;
+            color: white;
+            padding-top: 10px;
+            padding-left: 15px;
+        }
+        
+        #txt {
+            width: 320px;
+            height: 50px;
+            display: block;
+            padding-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(170, 180, 142);
+            font-size: 40px;
+            border-radius: 10px;
+        }
+        
+        .item {
+            background-color: rgb(45, 40, 50);
+            width: 60px;
+            height: 50px;
+            font-size: 20px;
+            margin: 5px;
+            border-radius: 10px;
+            border: 2px solid #808080;
+            font-weight: bold;
+            font-family: fantasy;
+            cursor: pointer;
+            box-shadow: 1px 1px 1px 0.2px #808080;
+            color: whitesmoke;
+        }
+        
+        .item:hover {
+            box-shadow: 0 2px 5px white;
+            transition: 0.5s;
+        }
+        
+        .box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        
+        .bg-green {
+            background-color: rgb(122, 201, 43);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator-container">
+        <div class="logo">CASIO</div>
+        <br/>
+        <input type="text" name="screen" id="txt">
+        <br/>
+
+        <div class="box">
+            <button class="item">(</button>
+            <button class="item">)</button>
+            <button class="item">%</button>
+            <button class="item bg-green">AC </button>
+        </div>
+
+        <div class="box">
+            <button class="item">7</button>
+            <button class="item">8</button>
+            <button class="item">9</button>
+            <button class="item">/</button>
+        </div>
+
+        <div class="box">
+            <button class="item">4</button>
+            <button class="item">5</button>
+            <button class="item">6</button>
+            <button class="item">*</button>
+        </div>
+
+        <div class="box">
+            <button class="item">1</button>
+            <button class="item">2</button>
+            <button class="item">3</button>
+            <button class="item">-</button>
+        </div>
+
+        <div class="box">
+            <button class="item">0</button>
+            <button class="item">.</button>
+            <button class="item">=</button>
+            <button class="item">+</button>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
