@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <title>calculator</title>
     <style>
@@ -37,14 +38,12 @@
             background-color: rgb(45, 40, 50);
             width: 60px;
             height: 50px;
-            font-size: 20px;
+            font-size: 15px;
             margin: 5px;
             border-radius: 10px;
             border: 2px solid #808080;
-            font-weight: bold;
-            font-family: fantasy;
             cursor: pointer;
-            box-shadow: 1px 1px 1px 0.2px #808080;
+            box-shadow: 1px 1px 1px 0.2px #3e3d3d;
             color: whitesmoke;
         }
         
@@ -64,6 +63,23 @@
         }
     </style>
 </head>
+<script type="text/javascript">
+    function handleClick(val) {
+        const inputBox = document.getElementById("txt");
+        inputBox.value = (inputBox.value + val);
+    }
+
+    function clearScreen(val) {
+        const inputBox = document.getElementById("txt");
+        inputBox.value = "";
+    }
+
+    function calculate(val) {
+        const inputBox = document.getElementById("txt");
+        const ans = eval(inputBox.value);
+        inputBox.value = ans;
+    }
+</script>
 
 <body>
     <div class="calculator-container">
@@ -73,38 +89,39 @@
         <br/>
 
         <div class="box">
-            <button class="item">(</button>
-            <button class="item">)</button>
-            <button class="item">%</button>
-            <button class="item bg-green">AC </button>
+            <button class="item" onClick="handleClick('(')">(</button>
+            <button class="item" onClick="handleClick(')')">)</button>
+            <button class="item" onClick="handleClick('%')">%</button>
+            <button class="item bg-green" onClick="clearScreen()">AC </button>
         </div>
 
         <div class="box">
-            <button class="item">7</button>
-            <button class="item">8</button>
-            <button class="item">9</button>
-            <button class="item">/</button>
+            <button class="item" onClick="handleClick(7)">7</button>
+            <button class="item" onClick="handleClick(8)">8</button>
+            <button class="item" onClick="handleClick(9)">9</button>
+            <button class="item" onClick="clearScreen()">DEL</button>
         </div>
 
         <div class="box">
-            <button class="item">4</button>
-            <button class="item">5</button>
-            <button class="item">6</button>
-            <button class="item">*</button>
+            <button class="item" onClick="handleClick(4)">4</button>
+            <button class="item" onClick="handleClick(5)">5</button>
+            <button class="item" onClick="handleClick(6)">6</button>
+            <button class="item" onClick="handleClick('*')">*</button>
         </div>
 
         <div class="box">
-            <button class="item">1</button>
-            <button class="item">2</button>
-            <button class="item">3</button>
-            <button class="item">-</button>
+            <button class="item" onClick="handleClick(1)">1</button>
+            <button class="item" onClick="handleClick(2)">2</button>
+
+            <button class="item" onClick="handleClick(3)">3</button>
+            <button class="item" onClick="handleClick('-')">-</button>
         </div>
 
         <div class="box">
-            <button class="item">0</button>
-            <button class="item">.</button>
-            <button class="item">=</button>
-            <button class="item">+</button>
+            <button class="item" onClick="handleClick(0)">0</button>
+            <button class="item" onClick="handleClick('.')">.</button>
+            <button class="item" onClick="calculate()">=</button>
+            <button class="item" onClick="handleClick('+')">+</button>
         </div>
 
 
